@@ -42,6 +42,12 @@
 
 ---
 
+### **_Credits_**
+
+##### [DuckDuckGo Search](http://www.duckduckgo.com)
+
+---
+
 Contact
 
 - Micole Atkins
