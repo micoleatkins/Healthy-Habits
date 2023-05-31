@@ -2,10 +2,8 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const plannerSchema = new mongoose.Schema({
+const goalSchema = new mongoose.Schema({
   title: { type: String, required: true },
-  priorities: { type: String, required: true },
-  reminders: { type: String, required: true },
   date: {
     type: Number,
     default: function () {
@@ -14,4 +12,4 @@ const plannerSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Planner', plannerSchema)
+module.exports = mongoose.model('Goal', goalSchema)
