@@ -15,7 +15,7 @@ require('./config/passport')
 
 const indexRouter = require('./routes/index')
 const goalsRouter = require('./routes/goals')
-
+const plannerRouter = require('./routes/planner')
 const app = express()
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
@@ -41,7 +41,9 @@ app.use(function (req, res, next) {
 })
 
 app.use('/', indexRouter)
+app.use('/', plannerRouter)
 app.use('/goals', goalsRouter)
+
 app.use(function (req, res, next) {
   next(createError(404))
 })

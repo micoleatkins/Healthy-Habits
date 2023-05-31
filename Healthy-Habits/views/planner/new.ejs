@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<h2>Daily Planner</h2>
+<form action="/plans" method="POST">
+  <input type="text" name="Plan">
+  <input type="text" name="Plan">
+  <input type="text" name="Plan">
+  <input type="text" name="Plan">
+  <input type="text" name="Plan">
+  <input type="text" name="Plan">
+  <input type="text" name="Plan">
+  <input type="text" name="Plan">
+  <input type="text" name="Plan">
+  <input type="text" name="Plan">
+  <button type="submit">PLAN THE DAY!</button>
+</form>
+<p><%= errorMsg %></p>
+<%- include('../partials/footer') %>

@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 const passport = require('passport')
 
-router.get('/', function (req, res, next) {
-  res.redirect('/home')
+router.get('/planner', function (req, res, next) {
+  res.redirect('/planner')
 })
 
 router.get(
@@ -16,13 +16,13 @@ router.get(
 router.get(
   '/oauth2callback',
   passport.authenticate('google', {
-    successRedirect: '/home',
-    failureRedirect: '/home'
+    successRedirect: '/planner',
+    failureRedirect: '/'
   })
 )
 router.get('/logout', function (req, res) {
   req.logout(function () {
-    res.redirect('/home')
+    res.redirect('/')
   })
 })
 
