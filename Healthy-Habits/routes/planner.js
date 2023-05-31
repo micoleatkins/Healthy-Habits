@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
+const ensureLoggedIn = require('../config/ensureLoggedIn')
 
 const plannerCtrl = require('../controllers/planner')
-router.get('/', plannerCtrl.index)
-router.get('/new', plannerCtrl.new)
+router.get('/', ensureLoggedIn, plannerCtrl.index)
+router.get('/new', ensureLoggedIn, plannerCtrl.new)
 
-router.post('/', plannerCtrl.create)
+router.post('/', ensureLoggedIn, plannerCtrl.create)
 
 module.exports = router

@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
+const ensureLoggedIn = require('../config/ensureLoggedIn')
 
 const goalsCtrl = require('../controllers/goals')
-router.get('/', goalsCtrl.index)
-router.get('/new', goalsCtrl.new)
+router.get('/', ensureLoggedIn, goalsCtrl.index)
+router.get('/new', ensureLoggedIn, goalsCtrl.new)
 
-router.post('/', goalsCtrl.create)
+router.post('/', ensureLoggedIn, goalsCtrl.create)
 
 module.exports = router
