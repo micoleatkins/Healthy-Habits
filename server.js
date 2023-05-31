@@ -28,6 +28,9 @@ app.use(passport.session())
 app.use(function (req, res, next) {
   res.locals.user = req.user
 })
+app.get('/home', function (req, res) {
+  res.render('home')
+})
 
 app.use('/', indexRouter)
 app.use('/goals', goalsRouter)
@@ -39,10 +42,6 @@ app.use(function (req, res, next) {
 
 // app.get('/', function (req, res) {
 //   res.send('<h1>Healthy Habits</h2>')
-// })
-
-// app.get('/home', function (req, res) {
-//   res.render('home')
 // })
 
 app.listen(3000, function () {
