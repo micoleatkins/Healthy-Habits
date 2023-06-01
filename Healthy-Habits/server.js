@@ -41,7 +41,7 @@ app.use(function (req, res, next) {
 })
 
 app.use('/', indexRouter)
-app.use('/', plannerRouter)
+app.use('/planner', plannerRouter)
 app.use('/goals', goalsRouter)
 
 app.use(function (req, res, next) {
