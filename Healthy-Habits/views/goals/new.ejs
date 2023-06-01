@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 <link rel = 'stylesheet' href="/stylesheets/style.css" />
-<h2>Daily Goals</h2>
+<section>
+<h1>Daily Goals</h1>
 <form action="/goals" method="POST">
   <label>Goal
   <input type="text" name="Goals">
@@ -33,6 +34,5 @@
   <input type="text" name="Goals">
   </label>
   <button type="submit">Manifest!</button>
-</form>
-<p><%= errorMsg %></p>
-<%- include('../partials/footer') %>
+</section>
+

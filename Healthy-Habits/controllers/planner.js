@@ -4,7 +4,8 @@ const Planner = require('../models/planner')
 module.exports = {
   new: newPlanner,
   create,
-  index
+  index,
+  show
 }
 function index(req, res) {
   const planner = Planner.find({})
@@ -17,16 +18,20 @@ function newPlanner(req, res) {
 }
 
 async function create(req, res) {
-  req.body.nowShowing = !!req.body.nowShowing
-  req.body.cast = req.body.cast.trim()
-  if (req.body.cast) req.body.cast = req.body.cast.split(/\s*,\s*/)
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
   try {
-    await Goals.create(req.body)
-    res.redirect('/planner')
+    await Planner.create(req.body)
+    res.redirect(`/planner`)
   } catch (err) {
+    console.log(err)
     res.render('planner/new', { errorMsg: err.message })
   }
+}
+async function show(req, res) {
+  const planner = await Planner.findById(req.params.id).populate({
+    path: 'notes',
+    populate: {
+      path: 'user'
+    }
+  })
+  res.render('planner/show', { title: 'Daily Plans', plan })
 }

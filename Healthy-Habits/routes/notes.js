@@ -4,5 +4,5 @@ const notesCtrl = require('../controllers/notes')
 const ensureLoggedIn = require('../config/ensureLoggedIn')
 
 router.post('goals/:id/notes', ensureLoggedIn, notesCtrl.create)
-
+router.post('planner/:id/notes', ensureLoggedIn, notesCtrl.create)
 module.exports = router

@@ -19,3 +19,17 @@ async function create(req, res) {
     res.redirect(`/goals/${goal._id}`)
   }
 }
+async function create(req, res) {
+  const planner = await Planner.findById(req.params.id)
+  let notes = {
+    content: req.body.content,
+    user: req.user._id
+  }
+  planner.notes.push(note)
+  try {
+    await planner.save()
+    res.redirect(`/planner/${planner._id}`)
+  } catch (err) {
+    res.redirect(`/planner/${planner._id}`)
+  }
+}
