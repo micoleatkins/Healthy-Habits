@@ -4,7 +4,8 @@ const Goals = require('../models/goal')
 module.exports = {
   new: newGoal,
   create,
-  index
+  index,
+  show
 }
 function index(req, res) {
   const goals = Goals.find({})
@@ -17,18 +18,25 @@ function index(req, res) {
 function newGoal(req, res) {
   res.render('goals/new', { errorMsg: '' })
 }
-
 async function create(req, res) {
-  req.body.nowShowing = !!req.body.nowShowing
-  req.body.cast = req.body.cast.trim()
-  if (req.body.cast) req.body.cast = req.body.cast.split(/\s*,\s*/)
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
   try {
     await Goals.create(req.body)
-    res.redirect('/goals')
+    res.redirect(`/goals`)
   } catch (err) {
+    console.log(err)
     res.render('goals/new', { errorMsg: err.message })
   }
 }
+async function show(req, res) {
+  const goal = await Goals.findById(req.params.id).populate({
+    path: 'notes',
+    populate: {
+      path: 'user'
+    }
+  })
+  res.render('goals/show', { title: 'Daily Goal', goal })
+}
+
+// async function show(req, res) {
+//   const goal= await Goals.findById(req.params.id).populate
+// }

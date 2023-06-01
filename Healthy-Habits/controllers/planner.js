@@ -9,9 +9,7 @@ module.exports = {
 function index(req, res) {
   const planner = Planner.find({})
   console.log(planner)
-  res.render('planner/index', {
-    planner
-  })
+  res.render('planner/index', { title: 'planner', planner })
 }
 
 function newPlanner(req, res) {

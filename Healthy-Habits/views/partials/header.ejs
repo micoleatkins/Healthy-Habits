@@ -10,14 +10,12 @@
   <nav>
 <a href="/">Home</a>| <a href="/goals/new">Manifest</a> | <a href="/planner/new">Daily Planner</a>
 <% if (user) { %>
-  <a href="/planner/new"	<%- title === 'Add Plans' ? class='active' : '' %>>
-  ADD PLANS</a>
-  <a href="/goals/new" <%- title === 'Add Goals' ? class='active' : '' %>>MANIFEST</a>
+  <a href="/planner/index"	></a>
+  <a href="/goals/new" ></a>
   <a href="/logout">LOG OUT</a>
 <% } else { %>
-  <a href="/auth/google" class="login">LOG IN&nbsp;</a>
+  <a href="/auth/google" class="login">LOG IN<img src="https://i.imgur.com/FHjYyi0.png"></a>
 <% } %>
 
   </nav>
  <main>
-  <h1><%= title %></h1>

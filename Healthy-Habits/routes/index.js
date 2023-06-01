@@ -6,13 +6,15 @@ const passport = require('passport')
 //   res.redirect('/')
 // })
 router.get('/', function (req, res) {
-  res.render('planner/index')
+  res.render('planner/index', {
+    title: 'planner'
+  })
 })
 router.get(
   '/auth/google',
   passport.authenticate('google', {
-    scope: ['profile', 'email']
-    // prompt: 'select_account'
+    scope: ['profile', 'email'],
+    prompt: 'select_account'
   })
 )
 router.get(
