@@ -1,13 +1,19 @@
-* {
-  background-image: url(background.jpg);
-  background-position: 100%;
+.homepage {
+  background-image:url(background.jpg);
+  background-repeat: no repeat;
+  background-size: cover;
+  background-position: static;
   background-size: cover;
 }
 
+.goals-page{
+  background-image:url(quote1.jpg);
+  background-size: cover;
+}
 body {
   padding: 200px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(45, 117, 213);
+  /* background-color: rgb(45, 117, 213); */
   text-align: center;
 }
 
