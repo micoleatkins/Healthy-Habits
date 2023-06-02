@@ -2,15 +2,21 @@ const Planner = require('../models/planner')
 // const { create } = require('../models/planner')
 
 module.exports = {
-  new: newPlanner,
-  create,
   index,
-  show
+  show,
+  new: newPlanner,
+  create
 }
-function index(req, res) {
-  const planner = Planner.find({})
-  console.log(planner)
-  res.render('planner/index', { title: 'planner', planner })
+async function index(req, res) {
+  const goals = await Goals.find({})
+  console.log(goals)
+  res.render('goals/index', {
+    goals
+  })
+}
+async function show(req, res) {
+  const planner = await Planner.findById(req.params.id)
+  return res.render('notes/index', { title: 'Daily Planner', planner })
 }
 
 function newPlanner(req, res) {
@@ -20,18 +26,9 @@ function newPlanner(req, res) {
 async function create(req, res) {
   try {
     await Planner.create(req.body)
-    res.redirect(`/planner`)
+    res.redirect(`/notes`)
   } catch (err) {
     console.log(err)
     res.render('planner/new', { errorMsg: err.message })
   }
-}
-async function show(req, res) {
-  const planner = await Planner.findById(req.params.id).populate({
-    path: 'notes',
-    populate: {
-      path: 'user'
-    }
-  })
-  res.render('planner/show', { title: 'Daily Plans', plan })
 }

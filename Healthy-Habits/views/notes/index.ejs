@@ -1,7 +1,24 @@
 <%- include('../partials/header') %>
 <h1>NOTES</h1>
 <br><br>
-<section id="notes-show">
+<body class ="notes-show">
   <div>Notes:</div>
+  <% if (goals) { %>
+  <table>
+    <thead>
+      <tr>
+        <br><br>
+        <th>Goals list</th>
+        </tr>
+        </thead>
+        <tbody>
+          <% goals.forEach(function(g) { %>
+            <br><tr><%= g.title %></tr><br>
+        <% }) %>
+        </tbody>
+  <% } %>
+<br><br>
+<br>
+
 
 <%- include('../partials/footer') %>

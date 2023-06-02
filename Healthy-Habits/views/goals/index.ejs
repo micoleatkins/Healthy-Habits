@@ -8,11 +8,10 @@
     </tr>
   </thead>
   <tbody>
-    <% goals.forEach(function(m) { %>
+    <% goals.forEach(function(g) { %>
       <tr>
         <td><%= g.title %></td>
-        <td><%= g.date %></td>
-        <td><a href="/Goals/<%= m._id %>">DETAILS</a></td>
+        <td><a href="/notes/index<%= g._id %>">DETAILS</a></td>
       </tr>
       <% }); %>
     </tbody>

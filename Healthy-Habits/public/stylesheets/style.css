@@ -4,10 +4,20 @@
   background-size: cover;
   background-position: static;
   background-size: cover;
+  font-size: 20px;
+  font-family: 'Sintony', sans-serif;
 }
 
 .goals-page{
   background-image:url(quote1.jpg);
+  background-size: cover;
+}
+.planner-page{
+  background-image:url(quote2.jpg);
+  background-size: cover;
+}
+.notes-show{
+  background-image:url(background.jpg);
   background-size: cover;
 }
 body {
@@ -16,14 +26,12 @@ body {
   /* background-color: rgb(45, 117, 213); */
   text-align: center;
 }
-
-
 a {
   color: #e9e2db;
   
 }
 a:hover {
-  color: aqua;
+  color: rgb(255, 234, 0);
 }
 .login {
   display: flex;

@@ -1,18 +1,14 @@
 <%- include('../partials/header') %>
 <link rel = 'stylesheet' href="/stylesheets/style.css" />
+<section>
+<body class="planner-page">
 <h2>Daily Planner</h2>
 <form action="/planner" method="POST">
-  <input type="text" name="Plan">
-  <input type="text" name="Plan">
-  <input type="text" name="Plan">
-  <input type="text" name="Plan">
-  <input type="text" name="Plan">
-  <input type="text" name="Plan">
-  <input type="text" name="Plan">
-  <input type="text" name="Plan">
-  <input type="text" name="Plan">
-  <input type="text" name="Plan">
+  <br>
+  <input type="text" name="title">
+  <br>
   <button type="submit">PLAN THE DAY!</button>
 </form>
+</section>
 <p><%= errorMsg %></p>
 <%- include('../partials/footer') %>
