@@ -1,24 +1,27 @@
-### Healthy-Habits App
+### The Manifestation App
 
-# Welcome to the Healthy-Habits App
+# Welcome to The Manifestation App
 
 ## Date: 05-25-2023
 
 ### By: Micole Atkins
 
-#### [Linkedin](https://www.linkedin.com/in/micoleatkins/)
+#### [Linkedin](https://www.linkedin.com/in/micoleatkins/) | [Trello](https://trello.com/b/Cg30ma3x/the-manifestation-app)
 
 ### **_Description_**
 
-#### What do you consider the "Good Life"? The "Good Life" to us is living a healthier lifestyle with daily habits to match it. Somedays we have good days and some are far more worst than others. It doesn't matter if you're a full time working mom or a college student, we all need balance. That is why I present to you the "Healthy Habits" app where you can keep track of your day-to-day habits.
+#### What do you consider the "Good Life"? The "Good Life" to us is living a balanced lifestyle with daily goals. Somedays we have good days and some are far more worst than others. It doesn't matter if you're a full time working mom or a college student, we all need balance. That is why I present to you the "Manifestation" app where you can keep plan the day and manifest the life you deserve.
 
 ---
 
 ### **_Technologies_**
 
-- Javascript
-- HTML
-- CSS
+- Node.js
+- Express
+- Mongoose
+- MongoDB
+- Auth
+- EJS
 
 ---
 
@@ -28,7 +31,7 @@
 
 ---
 
-### **_Access Healthy Habits_**
+### **_Access The Manifestation App_**
 
 ##### A Trello board was used to keep track of development progress and can be viewed here [trello]
 
@@ -36,15 +39,15 @@
 
 ![Sad](http://yourpositiveoasis.com/wp-content/gallery/25-inspiring-and-positive-quotes/IMG_8332.PNG)
 
-![Happy](https://static.vecteezy.com/system/resources/previews/000/179/813/original/yoga-class-illustration-vector.jpg)
-
-![Happy](http://wholeandheavenlyoven.com/wp-content/uploads/2016/01/Healthy-Weekly-Meal-Plan_horizontal23.jpg)
-
 ---
 
 ### **_Credits_**
 
 ##### [DuckDuckGo Search](http://www.duckduckgo.com)
+
+##### mongoose-movies
+
+##### mongoose-flights lab
 
 ---
 
