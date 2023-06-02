@@ -8,12 +8,17 @@
     <thead>
       <tr>
         <br><br>
-        <th>Goals list</th>
         </tr>
         </thead>
         <tbody>
           <% goals.forEach(function(g) { %>
-            <br><tr><%= g.title %></tr><br>
+           <tr><%= g.title %></tr>
+           <form action="/goals/<%= g._id %>?_method=DELETE" method="POST">
+            <button type="Submit">DELETE</button>
+            </form>
+            <td>
+  
+              </td>
         <% }) %>
         </tbody>
   <% } %>
